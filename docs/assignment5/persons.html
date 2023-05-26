@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Manage Person</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <script src="src/v/persons.mjs" type="module"></script>
+</head>
+<body>
+<main>
+      <section id="Person-M" class="UI-Page">
+      <h1>Manage person</h1>
+      <ul class="menu">
+          <button type="button" id="RetrieveAndListAll">Retrieve and list all person</button>
+          <button type="button" id="Create">Create a new person</button>
+          <button type="button" id="Update">Update a person</button>
+          <button type="button" id="Delete">Delete a person</button>
+      </ul>
+      <div class="button"><a href="index.html">Back to Main menu</a></div>
+    </section>
+    <section id="Person-R" class="UI-Page">
+      <h1>Retrieve and list all person</h1>
+      <table>
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Directed Movies</th>
+          <th>Played Movies</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="button">
+        <button type="button" class="back-to-menu">Back to menu</button>
+      </div>
+    </section>
+    <section id="Person-C" class="UI-Page">
+      <h1>Create a new person</h1>
+      <form>
+        <div class="field">
+          <label>ID: <input type="text" name="personId"/></label>
+        </div>
+        <div class="field">
+          <label>Name: <input type="text" name="name"/></label>
+        </div>
+        <div class="button-group">
+          <button type="submit" name="commit">Save</button>
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </form>
+    </section>
+    <section id="Person-U" class="UI-Page">
+      <h1>Update an person</h1>
+      <form>
+        <div class="select-one">
+          <label>Select person: <select name="selectPerson"></select></label>
+        </div>
+        <div class="field">
+          <label>ID:
+            <output name="personId"></output>
+          </label>
+        </div>
+        <div class="field">
+          <label>Name: <input type="text" name="name"/></label>
+        </div>
+        <div class="button-group">
+          <button type="submit" name="commit">Save</button>
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </form>
+    </section>
+    <section id="Person-D" class="UI-Page">
+      <h1>Delete an person</h1>
+      <form>
+        <div class="select-one">
+          <label>Select person: <select name="selectPerson"></select></label>
+        </div>
+        <div class="button-group">
+          <button type="submit" name="commit">Delete</button>
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </form>
+    </section>
+</main>
+</body>
+</html>

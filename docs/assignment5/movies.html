@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Manage Movies</title>
+  <link rel="stylesheet" href="css/main.css"/>
+  <script src="src/v/movies.mjs" type="module"></script>
+</head>
+<body>
+<main>
+    <section id="Movie-M" class="UI-Page">
+      <h1>Manage movies</h1>
+      <ul class="menu">
+          <button type="button" id="moviesRetrieveAndListAll">Retrieve and list all movies</button>
+          <button type="button" id="Create">Create a new movie</button>
+          <button type="button" id="Update">Update a movie</button>
+          <button type="button" id="Delete">Delete a movie</button>
+      </ul>
+      <div class="button"><a href="index.html">Back to Main menu</a></div>
+    </section>
+    <section id="Movie-R" class="UI-Page">
+      <h1>Retrieve and list all movie</h1>
+      <table>
+        <thead>
+        <tr>
+          <th>Movie ID</th>
+          <th>Title</th>
+          <th>Release Date</th>
+          <th>Director</th>
+          <th>Actors</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="button">
+        <button type="button" class="back-to-menu">Back to menu</button>
+      </div>
+    </section>
+    <section id="Movie-C" class="UI-Page">
+      <h1>Create a new movie</h1>
+      <form>
+        <div class="field">
+          <label>Movie ID: <input type="text" name="movieId"/></label>
+        </div>
+        <div class="field">
+          <label>Title: <input type="text" name="title"/></label>
+        </div>
+        <div class="field">
+          <label>Release Date: <input type="Date" name="releaseDate"/></label>
+        </div>
+        <div class="select-one">
+          <label>Director: <select name="selectDirector"></select></label>
+        </div>
+        <div class="select-many">
+          <label>Actors:
+            <select name="selectActors" multiple="multiple"></select>
+          </label>
+        </div>
+        <div class="button-group">
+          <button type="submit" name="commit">Save</button>
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </form>      
+    </section>
+    <section id="Movie-U" class="UI-Page">
+      <h1>Update a movie</h1>
+      <form autocomplete="off">
+        <div class="select-one">
+          <label>Select movie: <select name="selectMovie"></select></label>
+        </div>
+        <div class="field">
+          <label>Movie ID:
+            <output name="movieId"></output>
+          </label>
+        </div>
+        <div class="field">
+          <label>Title: <input type="text" name="title"/></label>
+        </div>
+        <div class="field">
+          <label>Release Date: <input type="Date" name="releaseDate"/></label>
+        </div>
+        <div class="select-one">
+          <label>Director: <select name="selectDirector"></select></label>
+        </div>
+        <div class="widget">
+          <label>Actors:</label>
+          <div class="MultiChoiceWidget"></div>
+        </div>
+        <div class="button-group">
+          <button type="submit" name="commit" disabled="disabled">Save</button>
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </form>
+    </section>
+    <section id="Movie-D" class="UI-Page">
+      <h1>Delete a movie</h1>
+      <form>
+        <div class="select-one">
+          <label>Select movie: <select name="selectMovie"></select></label>
+        </div>
+        <div class="button-group">
+          <button type="submit" name="commit">Delete</button>
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </form>
+    </section>
+</main>
+</body>
+</html>
