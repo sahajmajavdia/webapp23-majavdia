@@ -107,7 +107,7 @@ function generateTestData() {
 }
 
 function clearData() {
-  if (confirm("Do you really want to delete all movie database?")) {
+  if (confirm("Do you really want to delete all movie?")) {
     try {
       [Actor, Director, Person, Movie].forEach(Class => {
         Class.instances = {};
