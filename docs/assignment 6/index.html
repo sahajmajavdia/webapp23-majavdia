@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JS Subtyping App</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module">
+    import { clearData, generateTestData } from "./src/c/app.mjs";
+    const clearButton = document.getElementById("clearData"),
+      generateTestDataButtons = document.querySelectorAll("button.generateTestData");
+    // Set event handlers for the buttons "clearData" and "generateTestData"
+    clearButton.addEventListener("click", clearData);
+    for (const btn of generateTestDataButtons) {
+      btn.addEventListener("click", generateTestData);
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+      <div class="title">
+        <h1>Movie</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="directors.html">Directors</a></li>
+          <li><a href="actors.html">Actors</a></li>
+          <li><a href="people.html">People</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+      <div class="two-col-menu">
+        <ul class="menu">
+          <li><a href="movies.html">Manage movie data</a></li>
+          <li><a href="directors.html">Manage director data</a></li>
+          <li><a href="actors.html">Manage actor data</a></li>
+          <li><a href="people.html">Manage person data</a></li>
+        </ul>
+        <ul class="menu">
+          <li>
+            <button type="button" class="generateTestData">Generate test data</button>
+          </li>
+          <li>
+            <button type="button" id="clearData">Clear database</button>
+          </li>
+        </ul>
+  </main>
+</body>
+</html>

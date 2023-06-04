@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Manage Actors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="src/v/actors.mjs" type="module"></script>
+</head>
+<body>
+  <header>
+      <div class="title">
+        <h1>Movie</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="directors.html">Directors</a></li>
+          <li><a href="actors.html">Actors</a></li>
+          <li><a href="people.html">People</a></li>
+        </ul>
+      </nav>
+  </header>
+  <main>
+      <section id="Actor-M" class="UI-Page">
+        <h1>Manage actor</h1>
+        <ul class="menu">
+            <button type="button" id="RetrieveAndListAll">Retrieve/list all actor records</button>
+            <button type="button" id="Create">Create a new actor record</button>
+            <button type="button" id="Update">Update an actor record</button>
+            <button type="button" id="Delete">Delete an actor record</button>
+        </ul>
+        <div class="button"><a href="index.html">Back to Main menu</a></div>
+      </section>
+      <section id="Actor-R" class="UI-Page">
+        <h1>List actors</h1>
+        <table id="actors">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Agent</th>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="button">
+          <button type="button" class="back-to-menu">Back to menu</button>
+        </div>
+      </section>
+      <section id="Actor-C" class="UI-Page">
+        <h1>Create new actor</h1>
+        <form>
+          <div class="field">
+            <label>ID: <input type="text" name="personId" /></label>
+          </div>
+          <div class="field">
+            <label>Name: <input type="text" name="name" /></label>
+          </div>
+          <div class="select-one">
+            <label>Agent: <select name="selectAgent"></select></label>
+          </div>
+          <div class="button-group">
+            <button type="submit" name="commit">Save</button>
+            <button type="button" class="back-to-menu">Back to menu</button>
+          </div>
+        </form>
+      </section>
+      <section id="Actor-U" class="UI-Page">
+        <h1>Update actor</h1>
+        <form>
+          <div class="select-one">
+            <label>Select actor: <select name="selectActor"></select></label>
+          </div>
+          <div class="field">
+            <label>ID:
+              <output name="personId"></output>
+            </label>
+          </div>
+          <div class="field">
+            <label>Name: <input type="text" name="name" /></label>
+          </div>
+          <div class="select-one">
+            <label>Agent: <select name="selectAgent"></select></label>
+          </div>
+          <div class="button-group">
+            <button type="submit" name="commit">Save changes</button>
+            <button type="button" class="back-to-menu">Back to menu</button>
+          </div>
+        </form>
+      </section>
+      <section id="Actor-D" class="UI-Page">
+        <h1>Delete actor</h1>
+        <form>
+          <div class="select-one">
+            <label>Select actor: <select name="selectActor"></select></label>
+          </div>
+          <div class="button-group">
+            <button type="submit" name="commit">Delete</button>
+            <button type="button" class="back-to-menu">Back to menu</button>
+          </div>
+        </form>
+      </section>
+  </main>
+</body>
+</html>
